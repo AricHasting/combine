@@ -1,4 +1,5 @@
 import combine, cmb, cmbi from require "combine"
+require "moon.all"
 
 describe 'combine', ->
   it 'is nil for 0 args', ->
@@ -21,10 +22,11 @@ describe 'combine', ->
     assert.same {name: "Bob", age: 43}, result
     assert.same {name: "Joe", age: 43}, t1
   
-  it 'fails for non-table arguments', ->
-    t1 = {name: "Joe", age: 43}
+  it 'adds non-table arguments', ->
+    t1 = {name: "Joe", 43}
     t2 = "Hello"
-    assert.has_error(-> combine t1, t2)
+    t3 = "World"
+    assert.same {name: "Joe", 43, "Hello", "World"}, combine(t1, t2, t3)
 
 describe 'cmb', ->
   it 'combines and mutates', ->

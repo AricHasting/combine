@@ -30,13 +30,16 @@ combine = (...) ->
 
   -- Return first value if only one argument
   if #args == 1
-    return args[1]
+    args[1]
 
   -- Fold all table key/values into the previous
   return fold args, (a, b) ->
-    for key, val in pairs b
-      a[key] = val
-    return a
+    if type(b) == "table"
+      for key, val in pairs b
+        a[key] = val
+    else
+      table.insert(a, b)
+    a
 
 cmb = (...) ->
   combine ...
