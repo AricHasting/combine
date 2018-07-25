@@ -38,4 +38,10 @@ combine = (...) ->
       a[key] = val
     return a
 
-{:combine}
+cmb = (...) ->
+  combine ...
+
+cmbi = (...) ->
+  combine {}, ...
+
+{:combine, :cmb, :cmbi}

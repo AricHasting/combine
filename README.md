@@ -54,6 +54,16 @@ combine first, second
 p first
 ```
 
+## Shorthand Functions
+combine.moon provides shorthand functions for combine:
+- `cmb(...)` is a direct shorthand for combine, and it behaves the same.
+- `cmbi(...)` places your arguments after an empty table to avoid mutating the arguments. It makes code cleaner when chaining combines.
+
+Import them with
+```moonscript
+import cmb, cmbi from require "combine"
+```
+
 ## Resources
 Javascript equivalent: [Object.assign()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
 
