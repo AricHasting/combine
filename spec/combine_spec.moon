@@ -1,4 +1,4 @@
-import combine, cmb, cmbi from require "combine"
+import combine, cmb, cmbi from require "src/combine"
 require "moon.all"
 
 describe 'combine', ->

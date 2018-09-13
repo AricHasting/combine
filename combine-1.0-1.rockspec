@@ -1,8 +1,8 @@
 package = "combine"
-version = "1.0-0"
+version = "1.0-1"
 source = {
     url = "git://github.com/AricHasting/combine",
-    tag = "v1.0"
+    tag = "v1.0.1"
 }
 description = {
    summary = "Left-combine a series of tables.",
@@ -21,6 +21,6 @@ dependencies = {
 build = {
     type = "builtin",
     modules = {
-       combine = "combine.lua"
+       combine = "src/combine.lua"
     }
 }
